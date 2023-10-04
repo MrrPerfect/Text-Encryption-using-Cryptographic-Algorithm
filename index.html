@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Encryption Using Cryptographic Algorithms</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.0.0/crypto-js.min.js"></script>
+
+</head>
+<body>
+    <header>
+        <h1>Text Encryption Using Cryptographic Algorithms</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="introduction.html">Introduction</a></li>
+            <li><a href="how-it-works.html">How It Works</a></li>
+            <li><a href="types-of-algorithms.html">Types of Algorithms</a></li>
+            <li><a href="applications.html">Applications</a></li>
+            <li><a href="advantages-and-disadvantages.html">Advantages and Disadvantages</a></li>
+            <li><a href="future.html">Future of Text Encryption</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction">
+            <h2>Introduction to Cryptography</h2>
+            <p>Cryptography is the study and practice of techniques for secure communication in the presence of third parties called adversaries. It involves constructing and analyzing protocols that prevent third parties from reading private messages. It deals with developing and analyzing protocols that prevent malicious third parties from retrieving information being shared between two entities, thereby following the various aspects of information security.</p>
+        </section>
+
+        <section id="how-it-works">
+            <h2>How Cryptography Works</h2>
+            <p>Cryptography works by taking plaintext (or cleartext) and scrambling it into ciphertext, so that the encoded output can be understood only by the intended recipient. As ciphertext, the information should be unreadable to all except the intended recipient. Encryption uses an algorithm and a key to transform an input (i.e., plaintext) into an encrypted output (i.e., ciphertext). A given algorithm will always transform the same plaintext into the same ciphertext if the same key is used.</p>
+        </section>
+
+        <section id="types-of-algorithms">
+            <h2>Types of Cryptographic Algorithms</h2>
+            <p>There are three main types of cryptographic algorithms:</p>
+            <ol>
+                <li>Symmetric Key Cryptography: This type of cryptography involves the use of a single key to encrypt and decrypt data.</li>
+                <li>Hash Functions: There is no usage of any key in this algorithm. A hash value with fixed length is calculated as per the plain text which makes it impossible for contents of plain text to be recovered.</li>
+                <li>Asymmetric Key Cryptography: Under this system, a pair of keys is used to encrypt and decrypt information. A receiver’s public key is used for encryption and a receiver’s private key is used for decryption.</li>
+            </ol>
+        </section>
+
+        <section id="applications">
+            <h2>Applications of Cryptography</h2>
+            <p>Applications of cryptography include electronic commerce, chip-based payment cards, sim-card authentication, social-media storage, digital currencies, computer passwords, military communications, and more. We use cryptography everywhere in our everyday life. For instance, we use it to send online purchase passwords securely to multiple networks. Email clients and bankers use cryptography to save your passwords. Cryptography is used to authenticate devices and to other devices and people.</p>
+        </section>
+
+        <section id="advantages-and-disadvantages">
+            <h2>Advantages and Disadvantages of Cryptography</h2>
+            <p>Cryptography provides several benefits such as confidentiality, integrity, authentication, and non-repudiation. However, it also has some drawbacks. Even an authorized user may find it challenging to access strongly encrypted, authenticated, and password-protected information at a time when access is vital for decision-making. High availability cannot be ensured through the use of cryptography. Other defense strategies are required to counter dangers like denial of service (DoS) attacks and total information system failure.</p>
+        </section>
+
+        <section id="future">
+            <h2>Future of Cryptography</h2>
+            <p>The future of cryptography is expected to involve advances in areas like confidential computing, quantum-safe cryptography, and fully homomorphic encryption. The next stage in the development of encryption may involve the use of quantum computers, which will add layers of complexity that are currently not possible. Post-quantum cryptography aims to create encryption methods that cannot be broken by algorithms or calculations that run on future quantum computers.</p>
+        </section>
+
+        <section id="aes-encryption"> <!-- Added section for AES Encryption -->
+            <h2>AES Encryption and Decryption</h2>
+            <form id="encryptionForm">
+                <label for="text">Text:</label><br>
+                <input type="text" id="text" name="text"><br>
+        
+                <label for="key">Key:</label><br>
+                <input type="text" id="key" name="key"><br>
+        
+                <input type="button" value="Encrypt" onclick="encrypt()">
+            </form>
+        
+            <p id="encryptedText"></p>
+        
+            <button onclick="decrypt()">Decrypt</button>
+        
+            <p id="decryptedText"></p>
+        </section>
+    </main>
+
+    <footer>
+        <!-- Footer content goes here -->
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="aes.js"></script>
+    
+
+</body>
+</html>
